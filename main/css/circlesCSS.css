@@ -1,0 +1,572 @@
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px|Open+Sans:400,300,300italic,400italic,600,600italic);
+
+@import url(https://fonts.googleapis.com/css?family=Poiret+One|Indie+Flower|Shadows+Into+Light|Josefin+Sans:400,600,600italic,700,400italic|Architects+Daughter|Kaushan+Script|Rock+Salt|Shadows+Into+Light+Two);
+
+/*
+
+font-family: 'Poiret One', cursive;
+
+font-family: 'Indie Flower', cursive;
+
+font-family: 'Shadows Into Light', cursive;
+
+font-family: 'Josefin Sans', sans-serif;
+
+font-family: 'Architects Daughter', cursive;
+
+font-family: 'Kaushan Script', cursive;
+
+font-family: 'Rock Salt', cursive;
+
+font-family: 'Shadows Into Light Two', cursive;
+
+*/
+@import url(https://fonts.googleapis.com/css?family=Cookie);
+/* font-family: 'Cookie', cursive; */
+
+/* =============================================================================
+ The Body
+============================================================================= */
+html,
+body,
+div,
+h1,
+p,
+a,
+video {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 1;
+    margin: 0;
+    font-family: 'Poiret One', cursive;
+    background-color:;
+
+}
+
+#home_page {
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    min-height: 600px;
+    position: relative;
+/*    z-index: 5;*/
+}
+
+#home-content {
+    z-index: 5;
+}
+
+#about_page, #portfolio_page, #contact_page {
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    min-height: 600px;
+    min-width: 1000px;
+/*    position: relative;*/
+    z-index: 10;
+
+    position:fixed;
+    display:none;
+/*    overflow: hidden;*/
+
+}
+
+#about_page{
+    opacity: 100%;
+}
+#portfolio_page {}
+#contact_page {}
+#random_page {}
+
+.container {
+    height: 100%;
+    margin: 0;
+}
+
+
+h3, h2 {
+    color: white;
+}
+
+
+/**--------- Aligning Divs ---------**/
+.center-h {
+    left: 50%;
+    transform: translate(-50%, 0%);
+     position: absolute;
+}
+
+.center-v {
+    top: 50%;
+    transform: translate(0%, -50%);
+     position: absolute;
+}
+
+.center-c {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+
+/*============================================================================= */
+
+/*--- HOME PAGE ----*/
+#home_page {
+    overflow: hidden;
+}
+
+#home_page .bgimage {
+    width: 950px;
+    margin-left: 30px;
+    z-index: -5;
+    margin-top: 1px;
+    position: absolute;
+}
+
+#sides, #home-content {
+    height: 100%;
+}
+
+
+#outsides {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+#outsides .s2, #outsides .s8 {
+    height: 100%;
+}
+
+#outsides .s2 {
+    height: 100%;
+    z-index: 30;
+}
+
+
+/*------------------------------------------------- */
+/*HOVER EFFECTS*/
+/* Pausing Animation on hover */
+#about:hover, #portfolio:hover, #contacts:hover, #random:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+}
+
+.small.circle {
+    width: 0rem;
+    height: 0rem;
+}
+.small.squircle, .small.circle {
+
+}
+
+/*First Letters*/
+#about div h2, #portfolio div h2, #contacts div h2, #random div h2  {
+    height: 20px;
+}
+
+/*The rest of the letters*/
+#about div p, #portfolio div p, #contacts div p, #random div p {
+    height: 7rem;
+    width: 7rem;
+    font-size: 1.5rem;
+    top: 1rem;
+    padding-top: .5em;
+}
+
+#about div p {
+    padding-left: 1.35em;
+    color: rgba(37, 172, 162, 0.75);
+}
+
+#portfolio div p {
+    padding-left: .8em;
+    color: rgba(235, 67, 35, 0.75);
+}
+
+#contacts div p {
+    padding-left: 1em;
+    color: rgba(95, 33, 203, 0.75);
+
+}
+
+#random div p {
+    padding-left: .9em;
+    color: rgba(208, 57, 159, 0.75);
+}
+
+#about div p:hover, #about div p:active, #portfolio div p:hover, #contacts div p:hover, #random div p:hover {
+    height: 30px;
+    color: #fff;
+    font-weight: bold;
+    top: 3.2rem;
+    transition: all 0.6s ease;
+}
+
+#about:hover, #portfolio:hover, #contacts:hover, #random:hover{
+    width: 6em;
+    height: 6em;
+/*
+    top: calc(50% - 7em);
+    transform-origin: 50% 7em;
+*/
+    transition: all 0.6s ease;
+
+}
+
+/*------------------------------------------------------------ */
+/*popup divs*/
+
+#close-about, #close-portfolio, #close-contact, #close-thanks {
+    display:block;
+    position:absolute;
+    color:white;
+    height:30px;
+    width:35px;
+    font-size:30px;
+    text-decoration:none;
+    text-align:center;
+    font-weight:bold;
+
+    z-index: 50;
+}
+
+
+#close-about{
+    margin-left: 458px;
+    margin-top: 200px;
+}
+
+#close-about:hover, #close-portfolio:hover, #close-contact:hover {
+    background:rgb(245,245,245);
+    color:black;
+}
+
+#close-portfolio{
+    margin-left: 467px;
+    margin-top: 60px;
+}
+
+#close-contact{
+    margin-left: 454px;
+    margin-top: 160px;
+}
+
+
+#about_page:target {
+    display:block;
+    opacity:2;
+}
+
+#portfolio_page:target {
+    display:block;
+    opacity:2;
+}
+
+#contact_page:target {
+    display:block;
+    opacity:2;
+}
+
+#random_page:target {
+    display:block;
+    opacity:2;
+}
+
+/*Circle Div*/
+.sqDiv {
+    height: 700px;
+    width: 700px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 3px;
+}
+
+
+/*Div Animations*/
+
+#about-sq, #portfolio-sq, #contact-sq, #random-sq {
+    -webkit-animation:
+        pulse 3s
+    animation:
+        pulse 3s
+}
+
+/*============================================================================= */
+
+/*--- ABOUT PAGE ----*/
+
+
+#about-sq {
+    background-color:rgba(37, 172, 162, 0.75);
+    opacity: 1;
+}
+
+/*--- Content ----*/
+#mid-row {
+    height: 300px;
+    width: 500px;
+    top: 200px;
+}
+
+#mid-row .s2, #mid-row .s8 {
+    height: 100%;
+}
+
+
+#aboutme {
+    text-align: center;
+    border: thin solid #fff;
+}
+
+#about-content {}
+
+#aboutme-content p {
+    font-size: 1.6em;
+    font-weight: bold;
+    color:white;
+    letter-spacing: 1.2px;
+    text-align: center;
+}
+
+
+/*============================================================================= */
+
+/*--- PORTFOLIO PAGE ----*/
+
+#portfolio-sq {
+    background-color:rgba(235, 67, 35, 0.75);
+}
+
+#portfolio-title, #portfolio-content {
+    margin-left: 2px;
+    top: 60px;
+    position: relative
+}
+
+#portfolio-title {
+    width: 300px;
+    height: 80px;
+    position: relative;
+    text-align: center;
+    border: thin solid #fff;
+
+}
+
+#portfolio-content {
+    height: 480px;
+    width: 100%;
+    z-index: 30;
+}
+
+#portfolio-content .row {
+    height: 200px;
+    width: 550px;
+    position: relative;
+    top: 10px;
+    margin-left: 2px;
+
+}
+
+.heading {
+    font-style: italic
+}
+
+.heading, .description {
+    position: relative;
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+    letter-spacing: 1.1px;
+    font-weight: bold;
+}
+
+#row2 {
+    margin-top: 0px;
+}
+
+#InsideOut, #dishi {
+    position: relative;
+    height: 100%;
+    width: 200px;
+    display: block;
+/*    overflow: hidden;*/
+}
+
+#InsideOut img {
+    margin-left: -10px;
+    height: 180px;
+    width: 180px;
+    border-radius: 10%;
+    border-color: aliceblue;
+    border-style: solid;
+    border-width: thin;
+    margin-right: 10px;
+}
+
+#dishi img {
+    height: 200px;
+    width: 123px;
+    border-radius: 5%;
+    border-color: aliceblue;
+    border-style: solid;
+    border-width: thin;
+    margin-right: 10px;
+
+}
+
+#portfolio-content .row .s8 {
+    width: 330px;
+    height: 100%;
+    text-align: center;
+
+}
+
+
+
+
+/*============================================================================= */
+
+/*--- CONTACTS PAGE ----*/
+
+#contact-sq {
+    background-color:rgba(95, 33, 203, 0.75);
+}
+
+#contact-title {
+    width: 300px;
+    height: 80px;
+    position: relative;
+    text-align: center;
+    border: thin solid #fff;
+    top: 160px;
+
+}
+
+#contact-content {
+    width: 500px;
+    height: 300px;
+    margin: 0px auto;
+    color: white;
+    top: 180px;
+    position: relative;
+    z-index: 30;
+    text-align:center;
+    padding: 0px 50px 15px;
+    margin-top:20px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.4rem;
+
+}
+
+input[type="text"]{
+    width: 60px;
+    margin-top:10px;
+    padding:10px;
+    border: none;
+    border-bottom:1px solid #fff;
+}
+
+input[placeholder="your@email.com"] {
+    width: 160px;
+}
+
+input[placeholder="first name"], input[placeholder="last name"], input[placeholder="your@email.com"] {
+    font-size: 1rem;
+    font-style: italic;
+    text-align: center;
+    color: #fff;
+}
+
+textarea{
+    border: none;
+    border-bottom:1px solid #fff;
+    padding:10px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    height: 50px;
+    resize:vertical;
+    text-align: center;
+}
+
+input[type="submit"]{
+    width: 200px;
+    margin-top: 30px;
+    padding: 10px 45px;
+    background-color: rgba(233, 124, 32, 0.75);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+
+/*============================================================================= */
+
+/*--- RANDOM 'THANKS' PAGE ----*/
+#random_page {
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    min-height: 600px;
+    min-width: 1000px;
+    position: absolute;
+    z-index: 10;
+}
+
+#random-sq {
+    background-color:rgba(208, 57, 159, 0.75);
+
+}
+
+#contact-response {
+    height: 300px;
+    width: 500px;
+    top: 200px;
+}
+
+#contact-response .s2, #contact-response .s8 {
+    height: 100%;
+}
+
+#thank-you {
+    text-align: center;
+    border: thin solid #fff;
+}
+
+#random-content {
+    height: 200px;
+    width: 100%;
+    padding-top: 70px;
+}
+
+#random-content p {
+    font-size: 1.6em;
+    font-weight: bold;
+    color:white;
+    letter-spacing: 1.2px;
+    text-align: center;
+}
+
+
